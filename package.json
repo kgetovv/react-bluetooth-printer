@@ -28,6 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "ionic-serve": "ionic serve",
     "ionic-build": "ionic build",
     "ionic-cap:copy": "ionic cap copy",
     "ionic-cap:open": "ionic cap open android",

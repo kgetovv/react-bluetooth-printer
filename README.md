@@ -28,6 +28,10 @@ Executes the test runner in interactive watch mode, allowing you to write and ru
 This removes the single build dependency from your project, copying all configuration files and transitive dependencies directly into your project. 
 Note: this is a one-way operation and cannot be undone.
 
+- **Serve the ionic app**: `npm run ionic-serve`
+
+This command serves the Ionic app in the browser. Open [http://localhost:8100](http://localhost:8100) to view it. The app will automatically reload if you make changes to the code.
+
 ### Ionic and Capacitor Scripts for Android Development
 
 - **Build the Ionic app for production**: `npm run ionic-build`
