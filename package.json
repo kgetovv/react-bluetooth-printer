@@ -1,11 +1,12 @@
 {
-  "name": "bluetooth-printer-app",
+  "name": "react-printer-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^15.0.6",
     "@testing-library/user-event": "^13.5.0",
+    "@types/w3c-web-serial": "^1.0.6",
     "@types/w3c-web-usb": "^1.0.10",
     "@types/web-bluetooth": "^0.0.20",
     "react": "^18.3.1",
