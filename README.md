@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Project Scripts Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This document provides an overview of the scripts defined in the `package.json` file of the project. 
+These scripts are designed to streamline the development, building, and deployment processes for both the web and Android platforms using React and Ionic.
 
-## Available Scripts
+## Running Project Scripts
 
-In the project directory, you can run:
+To facilitate the development and testing process, several npm scripts are defined in `package.json`. 
+You can run these scripts using `npm run <script-name>` or `yarn <script-name>` if you are using Yarn. 
+Here's how to execute each script:
 
-### `npm start`
+### Web Application Scripts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Start the development server**: `npm run start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This command launches the web application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The app will automatically reload if you make changes to the code.
 
-### `npm test`
+- **Build the application for production**: `npm run build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This compiles the web application for production deployment. The output is optimized and placed in the `build` folder.
 
-### `npm run build`
+- **Run tests**: `npm run test`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Executes the test runner in interactive watch mode, allowing you to write and run tests for your application components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Eject the application**: `npm run eject`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This removes the single build dependency from your project, copying all configuration files and transitive dependencies directly into your project. 
+Note: this is a one-way operation and cannot be undone.
 
-### `npm run eject`
+### Ionic and Capacitor Scripts for Android Development
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Build the Ionic app for production**: `npm run ionic-build`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Prepares the Ionic app for deployment or further native packaging. The output is optimized and placed in the `build` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Copy web assets to the Android project**: `npm run ionic-cap:copy`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ensures the Android app is synchronized with the latest web code. This script copies the web assets to the Android project.
 
-## Learn More
+- **Open the Android project in Android Studio**: `npm run ionic-cap:open`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Allows for manual adjustments, native debugging, and running the app from the IDE. This script opens the Android project in Android Studio.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Build the Android app**: `npm run ionic-cap:build`
 
-### Code Splitting
+Compiles the Android app using Capacitor, producing an APK or AAB file. The output is placed in the `android/app/build/outputs` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Run the app on a device or emulator**: `npm run ionic-cap:run`
 
-### Analyzing the Bundle Size
+Launches the app on a connected Android device or emulator for real-time testing and debugging.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Combined Script for Streamlined Workflow
 
-### Making a Progressive Web App
+- **Build and run everything with one command**: `npm run ionic:all`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A convenience script that sequentially executes the steps to build the Ionic app, copy web assets to the Android project, build the Android app, and run it on a device or emulator.

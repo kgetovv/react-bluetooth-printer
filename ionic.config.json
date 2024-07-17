@@ -1,0 +1,7 @@
+{
+  "name": "react-printer-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
