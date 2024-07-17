@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {toast} from 'react-toastify';
 
-const PrinterComponent = () => {
+const BluetoothPrinterComponent = () => {
     const [device, setDevice] = useState(null);
 
     const requestBluetoothDevice = async () => {
@@ -40,10 +40,10 @@ const PrinterComponent = () => {
 
     return (
         <div>
-            <button onClick={requestBluetoothDevice}>Connect to Printer</button>
+            <button onClick={requestBluetoothDevice}>Connect to Printer via Bluetooth</button>
             <button onClick={connectToDeviceAndPrint} disabled={!device}>Print Example Message</button>
         </div>
     );
 };
 
-export default PrinterComponent;
+export default BluetoothPrinterComponent;

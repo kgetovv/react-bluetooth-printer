@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
-import PrinterComponent from "./components/PrinterComponent";
+import BluetoothPrinterComponent from "./components/BluetoothPrinterComponent";
 import {ToastContainer} from "react-toastify";
+import USBPrinterComponent from "./components/UsbPrinterComponent";
 
 function App() {
     return (
@@ -13,7 +14,8 @@ function App() {
                 <p>
                     Thermal Printer App with ReactJS
                 </p>
-                <PrinterComponent/>
+                <BluetoothPrinterComponent/>
+                <USBPrinterComponent/>
             </header>
         </div>
     );
